@@ -11,6 +11,7 @@ public class TapStrategy {
 
     public TapStrategy(WebDriver driver) {
         this.driver = driver;
+        this.driver.manage().window().maximize();
         PageFactory.initElements(driver, this);
     }
 }

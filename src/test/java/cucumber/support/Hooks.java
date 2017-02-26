@@ -11,7 +11,7 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 public class Hooks {
 
     private WebDriver driver;
-    private String driverType = (System.getProperty("environment") == null) ? "firefox" : System.getProperty("environment");
+    private String driverType = (System.getProperty("environment") == null) ? "explorer" : System.getProperty("environment");
 
     public WebDriver getDriver() {
         return driver;

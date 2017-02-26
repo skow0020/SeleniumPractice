@@ -30,6 +30,7 @@ public class Homepage {
     }
 
     public void checkHeader(String content) {
+        String x = header.getText();
         Assert.assertEquals(content, header.getText());
     }
 
@@ -79,6 +80,12 @@ public class Homepage {
             case "Lakeshore":
                 tapLakeshore.click();
                 break;
+            case "Leadership":
+                tapLeadership.click();
+                break;
+            case "News":
+                tapNews.click();
+                break;
         }
 
     }
@@ -120,6 +127,12 @@ public class Homepage {
 
     @FindBy(how= How.ID,using="menu-item-1871")
     private WebElement tapLakeshore;
+
+    @FindBy(how= How.ID,using="menu-item-25")
+    private WebElement tapLeadership;
+
+    @FindBy(how= How.ID,using="menu-item-2018")
+    private WebElement tapNews;
 
     @FindBy(how= How.XPATH,using="//*[@id=\"post-1831\"]/div/div[5]/div/div[2]/div/p/a/img")
     private WebElement video;

@@ -13,6 +13,10 @@ Scenario: Homepage-LogoClick
   Given I am on "http://www.tapqa.com/"
   When I click the logo
   Then I navigate to page "http://www.tapqa.com/"
+  And I see the header
+    """
+    We test software
+    """
 
 @homepage
 Scenario: Homepage-TapStrategy
@@ -67,3 +71,15 @@ Scenario: Homepage-Solutions_Lakeshore
   Given I am on "http://www.tapqa.com/"
   When I hover over "Solutions" and select "Lakeshore"
   Then I navigate to page "http://www.tapqa.com/solutions/nearshore/"
+
+@homepage
+Scenario: Homepage-About_Leadership
+  Given I am on "http://www.tapqa.com/"
+  When I hover over "About" and select "Leadership"
+  Then I navigate to page "http://www.tapqa.com/leadership/"
+
+@homepage
+Scenario: Homepage-About_NewsEvents
+  Given I am on "http://www.tapqa.com/"
+  When I hover over "About" and select "News"
+  Then I navigate to page "http://www.tapqa.com/news-events/"

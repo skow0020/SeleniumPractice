@@ -24,20 +24,9 @@ public class HomepageSteps {
         commonPage = new CommonPage(hooks.getDriver());
     }
 
-    @Given("^I am on \"(.*?)\"$")
-    public void iAmOn(String url) throws Throwable {
-        page.goTo(url);
-        commonPage.VerifyUrl(url);
-    }
-
     @Then("^I see the header$")
     public void iSeeTheHeader(String content) throws Throwable {
         page.checkHeader(content);
-    }
-
-    @When("^I click the logo$")
-    public void iClickTheLogo() throws Throwable {
-        commonPage.logo.click();
     }
 
     @When("^I click the strategy link$")

@@ -17,13 +17,17 @@ public class CommonPage {
         PageFactory.initElements(driver, this);
     }
 
+    public void goTo(String url) {
+        driver.navigate().to(url);
+    }
+
     public String GetUrl()
     {
         return this.driver.getCurrentUrl();
     }
 
     public void VerifyUrl(String url) {
-        Assert.assertEquals(String.format("Expected url: {0} Actual url: {1}", url, GetUrl()), url, GetUrl());
+        Assert.assertEquals(url, GetUrl());
     }
 
     @FindBy(className = "fusion-logo-link")
