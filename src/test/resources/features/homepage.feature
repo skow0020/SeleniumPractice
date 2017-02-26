@@ -14,15 +14,19 @@ Scenario: Homepage-LogoClick
   When I click the logo
   Then I navigate to page "http://www.tapqa.com/"
   And I see the header
-    """
-    We test software
-    """
+      """
+      We test software
+      """
 
 @homepage
 Scenario: Homepage-TapStrategy
   Given I am on "http://www.tapqa.com/"
   When I click the strategy link
   Then I navigate to page "http://www.tapqa.com/solutions/tapstrategy/"
+  And I see the strategy header
+      """
+      tap|STRATEGY
+      """
 
 @homepage
 Scenario: Homepage-TapAutomation

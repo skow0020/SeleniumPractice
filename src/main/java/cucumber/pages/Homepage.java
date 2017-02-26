@@ -30,7 +30,6 @@ public class Homepage {
     }
 
     public void checkHeader(String content) {
-        String x = header.getText();
         Assert.assertEquals(content, header.getText());
     }
 

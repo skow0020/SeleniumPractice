@@ -1,5 +1,7 @@
 package cucumber.steps;
 
+import cucumber.api.PendingException;
+import cucumber.api.java.en.Then;
 import cucumber.pages.CommonPage;
 import cucumber.pages.Homepage;
 import cucumber.pages.TapStrategy;
@@ -18,5 +20,8 @@ public class TapStrategySteps {
         commonPage = new CommonPage(hooks.getDriver());
     }
 
-
+    @Then("^I see the strategy header$")
+    public void iSeeTheStrategyHeader(String header) throws Throwable {
+        page.checkHeader(header);
+    }
 }
