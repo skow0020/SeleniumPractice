@@ -11,7 +11,7 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 public class Hooks {
 
     private WebDriver driver;
-    private String driverType = (System.getProperty("environment") == null) ? "chrome" : System.getProperty("environment");
+    private String driverType = (System.getProperty("environment") == null) ? "firefox" : System.getProperty("environment");
 
     public WebDriver getDriver() {
         return driver;
@@ -56,7 +56,5 @@ public class Hooks {
 
 
     @After
-    public void afterScenario(Scenario scenario) {
-        driver.quit();
-    }
+    public void afterScenario(Scenario scenario) { driver.quit(); }
 }

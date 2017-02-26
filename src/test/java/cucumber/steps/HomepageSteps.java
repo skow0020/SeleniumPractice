@@ -5,6 +5,7 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import cucumber.helpers.Helpers;
 import cucumber.pages.CommonPage;
 import cucumber.pages.Homepage;
 import cucumber.support.Hooks;
@@ -57,5 +58,21 @@ public class HomepageSteps {
     @When("^I click the solution link$")
     public void iClickTheSolutionLink() throws Throwable {
         page.clickSolution();
+    }
+
+    @When("^I click the video link$")
+    public void iClickTheVideoLink() throws Throwable {
+        page.clickVideo();
+    }
+
+    @Then("^I can watch it$")
+    public void iCanWatchIt() throws Throwable {
+        page.verifyVideo();
+        Thread.sleep(10000);
+    }
+
+    @When("^I hover over \"([^\"]*)\" and select \"([^\"]*)\"$")
+    public void iHoverOverAndSelect(String hoverElement, String element) throws Throwable {
+        page.clickHeaderDropdown(hoverElement, element);
     }
 }
