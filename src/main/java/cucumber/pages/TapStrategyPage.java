@@ -9,10 +9,10 @@ import org.openqa.selenium.support.PageFactory;
 /**
  * Created by Colin on 2/25/2017.
  */
-public class TapStrategy {
+public class TapStrategyPage {
     private WebDriver driver;
 
-    public TapStrategy(WebDriver driver) {
+    public TapStrategyPage(WebDriver driver) {
         this.driver = driver;
         this.driver.manage().window().maximize();
         PageFactory.initElements(driver, this);
@@ -20,7 +20,6 @@ public class TapStrategy {
 
     public void checkHeader(String headerTitle)
     {
-        String x = header.getText();
         Assert.assertEquals(headerTitle, header.getText());
     }
 

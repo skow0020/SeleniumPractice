@@ -39,4 +39,9 @@ public class CommonSteps {
     public void iClickTheLogo() throws Throwable {
         commonPage.logo.click();
     }
+
+    @When("^I hover over \"([^\"]*)\" and select \"([^\"]*)\"$")
+    public void iHoverOverAndSelect(String hoverElement, String element) throws Throwable {
+        commonPage.clickHeaderDropdown(hoverElement, element);
+    }
 }

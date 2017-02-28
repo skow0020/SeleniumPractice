@@ -56,39 +56,6 @@ public class Homepage {
         vidContainer.click();
     }
 
-    public void clickHeaderDropdown(String headerElement, String dropdownElement)
-    {
-        WebElement hover = Helper.HeadersHover(hoverElements, headerElement);
-        this.waitForElement(hover, 10);
-
-        Actions action = new Actions(driver);
-        action.moveToElement(hover);
-        action.perform();
-
-        switch (dropdownElement)
-        {
-            case "Strategy":
-                tapStrategy.click();
-                break;
-            case "Automation":
-                tapAutomation.click();
-                break;
-            case "Consulting":
-                tapConsulting.click();
-                break;
-            case "Lakeshore":
-                tapLakeshore.click();
-                break;
-            case "Leadership":
-                tapLeadership.click();
-                break;
-            case "News":
-                tapNews.click();
-                break;
-        }
-
-    }
-
     //------------------------------------------ Utility Functions -----------------------------------------------
     private void waitForElement(WebElement element, int timeout)
     {
@@ -100,40 +67,19 @@ public class Homepage {
     @FindBy(css = ".fusion-column-wrapper i")
     private WebElement header;
 
-    @FindBy(how= How.XPATH,using="//*[@id=\"post-1831\"]/div/div[1]/div/div[3]/div/div[1]/a[1]")
+    @FindBy(how= How.PARTIAL_LINK_TEXT,using="Strategy for Scaling")
     private WebElement strategyBtn;
 
-    @FindBy(how= How.XPATH,using="//*[@id=\"post-1831\"]/div/div[1]/div/div[3]/div/div[1]/a[2]")
+    @FindBy(how= How.PARTIAL_LINK_TEXT,using="Continuous Integration, ")
     private WebElement continuousBtn;
 
-    @FindBy(how= How.XPATH,using="//*[@id=\"post-1831\"]/div/div[1]/div/div[3]/div/div[1]/a[3]")
+    @FindBy(how= How.PARTIAL_LINK_TEXT,using="Ensuring Quality ")
     private WebElement ensuringBtn;
 
-    @FindBy(how= How.XPATH,using="//*[@id=\"post-1831\"]/div/div[1]/div/div[3]/div/div[1]/a[4]")
+    @FindBy(how= How.PARTIAL_LINK_TEXT,using="I Need a Nearshore")
     private WebElement solutionBtn;
 
-    @FindBy(className="menu-text")
-    private List<WebElement> hoverElements;
-
-    @FindBy(how= How.ID,using="menu-item-1868")
-    private WebElement tapStrategy;
-
-    @FindBy(how= How.ID,using="menu-item-1869")
-    private WebElement tapAutomation;
-
-    @FindBy(how= How.ID,using="menu-item-1870")
-    private WebElement tapConsulting;
-
-    @FindBy(how= How.ID,using="menu-item-1871")
-    private WebElement tapLakeshore;
-
-    @FindBy(how= How.ID,using="menu-item-25")
-    private WebElement tapLeadership;
-
-    @FindBy(how= How.ID,using="menu-item-2018")
-    private WebElement tapNews;
-
-    @FindBy(how= How.XPATH,using="//*[@id=\"post-1831\"]/div/div[5]/div/div[2]/div/p/a/img")
+    @FindBy(how= How.CLASS_NAME,using="attachment-post-thumbnail")
     private WebElement video;
 
     @FindBy(how= How.CLASS_NAME,using="ilightbox-holder")

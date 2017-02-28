@@ -1,22 +1,20 @@
 package cucumber.steps;
 
-import cucumber.api.PendingException;
 import cucumber.api.java.en.Then;
 import cucumber.pages.CommonPage;
-import cucumber.pages.Homepage;
-import cucumber.pages.TapStrategy;
+import cucumber.pages.TapStrategyPage;
 import cucumber.support.Hooks;
 
 /**
  * Created by Colin on 2/26/2017.
  */
 public class TapStrategySteps {
-    private TapStrategy page;
+    private TapStrategyPage page;
     private CommonPage commonPage;
 
     public TapStrategySteps(Hooks hooks) {
 
-        page = new TapStrategy(hooks.getDriver());
+        page = new TapStrategyPage(hooks.getDriver());
         commonPage = new CommonPage(hooks.getDriver());
     }
 

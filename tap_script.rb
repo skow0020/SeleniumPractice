@@ -1,7 +1,7 @@
 require 'fileutils'
 
 source = "C:\\Users\\Colin\\Desktop\\Cucumber_Selenium\\selcucumber\\target\\cucumber"
-browsers = ['chrome', 'firefox', 'explorer']
+browsers = ['explorer', 'firefox', 'chrome']
 
 browsers.each do |browser|
   destination = "C:\\Users\\Colin\\Desktop\\Cucumber_Selenium\\selcucumber\\results\\#{browser}"

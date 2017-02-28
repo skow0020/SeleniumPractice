@@ -60,8 +60,4 @@ public class HomepageSteps {
         Thread.sleep(10000);
     }
 
-    @When("^I hover over \"([^\"]*)\" and select \"([^\"]*)\"$")
-    public void iHoverOverAndSelect(String hoverElement, String element) throws Throwable {
-        page.clickHeaderDropdown(hoverElement, element);
-    }
 }

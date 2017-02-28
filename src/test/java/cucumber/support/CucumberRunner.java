@@ -8,7 +8,7 @@ import org.junit.runner.RunWith;
 //To run from command line:
 //mvn clean test -Denv.BROWSER=firefox
 @RunWith(Cucumber.class)
-@CucumberOptions(features = "classpath:features",
+@CucumberOptions(features = "src\\test\\resources\\features",
         plugin={"pretty", "html:target/cucumber"},
         glue = {"cucumber.steps",
                 "cucumber.support"},
